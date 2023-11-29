@@ -1,4 +1,6 @@
 from django.db import models
+from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class testModel(models.Model):
@@ -18,3 +20,13 @@ class Place(models.Model):
     placeImage = models.ImageField(upload_to='VATA_mainApp\static\VATA_mainApp\PlaceImages',blank=True, null=True)
     placeCategory = models.CharField(max_length=6)
     
+
+
+class Favorito(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    lugar = models.ForeignKey(Place, on_delete=models.CASCADE)  
+
+
+    class Meta:
+        unique_together = ('usuario', 'lugar')
+

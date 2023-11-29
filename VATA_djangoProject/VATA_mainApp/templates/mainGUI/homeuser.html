@@ -128,14 +128,17 @@
     <div id="main-container">
         <div class="menu">
             <ul class="menu-content">
-                <li><a href="login"><span class="material-symbols-outlined">logout</span><span>Login</span></a></li>
-                <li><a href="registro"><span class="material-symbols-outlined">person</span><span>Register</span></a></li>
+                <li><a href=""><span class="material-symbols-outlined">home</span><span>Inicio</span></a></li>
+                <li><a href="index"><span class="material-symbols-outlined">explore</span><span>Descubre</span></a></li>
+                <li><a href="formulario"><span class="material-symbols-outlined">settings</span><span>Añade</span></a></li>
+                <li><a href="favoritos"><span class="material-symbols-outlined">dashboard</span><span>favoritos</span></a></li>
+                <li><a href="{% url 'inicio' %}"><span class="material-symbols-outlined">logout</span><span></span>Logout</a></li>                                                                                              </li>
             </ul>
         </div>
 
         <div class="welcome-container">
             <div class="welcome">
-                <h1>Inicie sesion para usar la aplicacion</h1>
+                <h1>Bienvenido</h1>
                 <p>Aquí encontrarás información y recursos sobre centros de reciclaje en los que puedas reciclar lo que quieras.</p>
             </div>
 
